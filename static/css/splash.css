@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.splash-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.logo {
+    font-size: 64px;
+    font-weight: bold;
+    color: #333;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.sun {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: slideDown 1.5s ease-in-out forwards;
+    opacity: 0;
+}
+
+.sun-body {
+    width: 80px;
+    height: 40px;
+    background-color: #FFD700;
+    border-radius: 80px 80px 0 0;
+    position: relative;
+}
+
+.eye {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+    top: 15px;
+}
+
+.eye:after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: black;
+    border-radius: 50%;
+    top: 4px;
+    left: 4px;
+}
+
+.left-eye {
+    left: 20px;
+}
+
+.right-eye {
+    right: 20px;
+}
+
+.college-name {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 1.5s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
